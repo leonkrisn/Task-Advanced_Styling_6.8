@@ -17,6 +17,8 @@
     />
 
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./style2.css" />
+
 
     <title>Task-Style_Layout_5.8</title>
   </head>
@@ -24,11 +26,13 @@
   <body>
     <div class="main-container">
       <!-- NAVBAR FOR LEFT -->
-      <div class="section__little-navbar">
+      <div class="section__little-navbar" onclick=showSidebar()>
+        <!-- MENU -->
         <div class="navbar__item-left">
           <a class="navbar__item" href="#">
-            <i class="fa-solid fa-file-lines"></i>
+            <i class="fa-solid fa-list"></i>
           </a>
+          <!-- LOGO -->
           <a class="navbar__item" href="#"
             ><img src="./img/logo_group.png" alt="" />
           </a>
@@ -36,38 +40,99 @@
         
         <!-- NAVBAR FOR RIGHT -->
         <div class="navbar__item-right">
+          <!-- PHONE -->
           <a class="navbar__item one" href="#"
             ><i class="fa-solid fa-phone-flip"></i>
           </a>
+          <!-- MESSAGE -->
           <a class="navbar__item one" href="#"
             ><i class="fa-solid fa-message"></i>
           </a>
+          <!-- USER -->
           <a class="navbar__item one" href="#"
             ><i class="fa-solid fa-user"></i>
           </a>
 
           <span class="navbar__item-span">|</span>
 
+          <!-- SERVICE -->
           <a class="navbar__item two" href="#"
             ><i class="fa-solid fa-screwdriver-wrench"></i>
           </a>
+          <!-- DOC -->
           <a class="navbar__item two" href="#"
             ><i class="fa-solid fa-square-poll-horizontal"></i>
           </a>
         </div>
       </div>
 
+
+      <!-- SIDEBAR -->
+       <div class="sidebar">
+
+          <div class="sidebar__top">
+            <!-- X -->
+            <a class="navbar__item" href="#" onclick=hideSidebar()>
+              <i class="fa-solid fa-xmark"></i>
+            </a>
+            <!-- LOGO -->
+            <a class="navbar__item logo" href="#"
+              ><img src="./img/logo_group.png" alt="" />
+            </a>
+            <!-- MAGNIFIER -->
+            <a href="#" class="navbar__item">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+          </div>
+
+          <div class="sidebar__listmenu">
+            <a href="#" class="part__navigation">Equipment repair</a>
+            <a href="#" class="part__navigation">Service and solutions</a>
+            <a href="#" class="part__navigation">Corporate clients</a>
+            <a href="#" class="part__navigation">Equipment sellers</a>
+            <a href="#" class="part__navigation">Partners</a>
+            <a href="#" class="part__navigation">Manufacturers</a>
+            <a href="#" class="part__navigation">Our service centres</a>
+            <a href="#" class="part__navigation">Contacts</a>
+          </div>
+
+          <div class="sidebar__bottom">
+            <div class="sidebar__bottomicon">
+              <!-- PHONE -->
+              <a class="navbar__item" href="#"
+                ><i class="fa-solid fa-phone-flip"></i>
+              </a>
+              <!-- MESSAGE -->
+              <a class="navbar__item" href="#"
+                ><i class="fa-solid fa-message"></i>
+              </a>
+              <!-- USER -->
+              <a class="navbar__item" href="#"
+                ><i class="fa-solid fa-user"></i>
+              </a>
+            </div>
+
+            <br>
+            <div class="info">
+              <span>mail@cps.com</span><br>
+              <span class="number">8 800 890 8900</span><br>
+              <a href="#">RU</a>
+              <a href="#">EN</a>
+              <a href="#">CH</a>
+            </div>
+
+          </div>
+
+       </div>
+
       <header class="section__header header">
         <div class="title">
           <h2>Services And Support</h2>
         </div>
 
-        <!-- <div class="nav-icon">
-            <div class="logo"></div>
-
-        </div> -->
 
         <div class="navbar">
+          <!-- FOR WIDE WEB -->
           <a class="navbar__item three" href="#">
             Submit a request <i class="fa-solid fa-screwdriver-wrench"></i>
           </a>
@@ -122,5 +187,18 @@
         </div>
       </div>
     </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+      function showSidebar() {
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'block'
+      }
+
+      function hideSidebar() {
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'none'
+      }
+    </script>
   </body>
 </html>

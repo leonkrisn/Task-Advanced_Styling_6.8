@@ -166,7 +166,8 @@ body {
   background-color: #F8F8F8;
 }
 
-.navbar__item-left img {
+.navbar__item img,
+.sidebar img {
   /* display: inline-flex; */
   width: 80px;
   padding-top: 10px;
@@ -214,8 +215,10 @@ h2 {
   opacity: 0.5;
 }
 
+/* ICON */
 .section__little-navbar i,
-.navbar i {
+.navbar i,
+.sidebar i {
   background-color: #ff3e79;
   color: white;
   display: inline-flex;
@@ -348,3 +351,118 @@ input[type="checkbox"]:checked ~ .dots {
 /* .paragraph_two:has(~ input[type="checkbox"]:checked) {
   display: inline;
 } */
+
+
+
+/* SIDEBAR */
+
+
+.sidebar {
+    display: none;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 999;
+    height: 100vh;
+    width: 320px;
+    /* flex-direction: column; */
+    align-items: flex;
+    justify-content: flex;
+    box-shadow: 10px 0 10px rgba(0, 0, 0, 0.1);   
+
+}
+
+
+.sidebar__top {
+  margin: 20px 10px;
+  justify-content: space-between;
+  align-items: center;
+  justify-items: center;
+
+}
+
+.navbar__item.logo {
+  margin-right: 60px;
+  align-items: center;
+
+}
+
+.sidebar__listmenu .part__navigation {
+  margin: 10px 0;
+  /* margin-bottom: 10px; */
+  margin-left: 30px;
+  padding-left: 10px;
+  align-items: center;
+}
+
+.sidebar__bottom {
+  position: relative;
+  bottom: 10px;
+  margin-left: 40px;
+  margin-top: 120px;
+  /* display: inline-flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* justify-items: center; */
+  
+}
+
+.sidebar .info {
+  justify-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  margin-top: 20px;
+}
+
+.sidebar .info span {
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+  /* text-align: center; */
+  /* justify-content: center; */
+  font-size: large;
+}
+
+.sidebar .info a {
+  text-decoration: none;
+  display: inline-flex ;
+  color: black;
+  font-size: larger;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+.sidebar .info a:hover {
+  opacity: 0.3;
+  /* font-weight: 1000; */
+}
+
+
+.sidebar .part__navigation:hover {
+  border-left: 4px solid #61dd95;
+  border-bottom: none;
+  align-items: center;
+  font-weight: 1000;
+  cursor: pointer;
+}
+
+.sidebar__bottom a {
+  margin-right: 10px;
+}
+.sidebar .info .number {
+  font-size: 30px;
+  font-weight: 900;
+  margin: 10px 0;
+}
+
+
+@media (min-width: 789px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+
